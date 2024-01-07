@@ -1,5 +1,7 @@
  # DIRT SYNTH
 
+## [DIRT SYNTH TIKTOK](https://www.tiktok.com/@quantum_trash/video/7321476734845570347)
+
 ![](https://raw.githubusercontent.com/LafeLabs/dirtsynth/main/images/dirtsynth.png)
 
 PUT A FEW MICROFARADS CAPACITOR IN SERIES WITH PIN 9 FROM YOUR ARDUINO INTO AN AUDIO JACK! 
