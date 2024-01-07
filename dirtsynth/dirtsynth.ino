@@ -1,29 +1,5 @@
- # DIRT SYNTH
-
-PUT A FEW MICROFARADS CAPACITOR IN SERIES WITH PIN 9 FROM YOUR ARDUINO INTO AN AUDIO JACK! 
-
-THIS WILL MAKE SURE WE DON'T DRIVE DC DOWN THAT LINE!
-
-YOU CAN RUN THE ARDUINO OFF A 5 VOLT SOLAR PANEL VIA USB!
-
-SMEAR GREASE AND DIRT ON THE CIRCUIT BOARD AND CREATE MODES OF OSCILLATION!
-
-THIS IS FULL STACK DIRT MAGIC!
-
-WE ARE DIRT LOOKING AT ITSELF!
-
-
-YOU WILL NEED TO INSTALL THE MOZZI LIBRARY ON YOUR ARDUINO!
-
-ARDUINO CODE IS AS FOLLOWS:
-
-
-```
-
 /*  Example playing a sinewave at a set frequency,
     using Mozzi sonification library.
-
-DIRT SYNTH IS JUST SINE WAVE WITH FREQUENCY BASED ON AN ANALOG VOLTAGE ON THE CIRCUIT BOARD
 
     Demonstrates the use of Oscil to play a wavetable.
 
@@ -40,6 +16,7 @@ DIRT SYNTH IS JUST SINE WAVE WITH FREQUENCY BASED ON AN ANALOG VOLTAGE ON THE CI
     Tim Barrass 2012, CC by-nc-sa.
 */
 
+int knob = 0;
 int voltage = 0;
 #include <Adafruit_NeoPixel.h>
 
@@ -53,10 +30,17 @@ Oscil <SIN2048_NUM_CELLS, AUDIO_RATE> aSin(SIN2048_DATA);
 // use #define for CONTROL_RATE, not a constant
 #define CONTROL_RATE 64 // Hz, powers of 2 are most reliable
 
+//int button1pin = 2;
+//int button2pin = 3;
+//boolean button1 = false;
+//boolean button2 = false;
+//boolean synthon = true;
 
 void setup(){
   startMozzi(CONTROL_RATE); // :)
-  aSin.setFreq(2600); // set the frequency 2600 HZ! HACK THE PLANET!
+  aSin.setFreq(2600); // set the frequency
+//  pinMode(button1pin,INPUT_PULLUP); 
+ // pinMode(button2pin,INPUT_PULLUP); 
     pinMode(9,OUTPUT); 
 
 }
@@ -74,9 +58,36 @@ AudioOutput_t updateAudio(){
 
 void loop(){
   
-  voltage = analogRead(A0);
-  aSin.setFreq(440 + 3*voltage);  
+//  button1 = !digitalRead(button1pin);  
+ // button2 = !digitalRead(button2pin); 
+  knob = analogRead(A2);
+//  voltage = analogRead(A1);
+    aSin.setFreq(440 + 3*knob);
+
+/*
+  if(button1 && synthon == false){
+    synthon = true;
+    startMozzi();
+  }
+  
+  if(button2 && synthon == false){
+    synthon = true;
+    startMozzi();  
+  }
+  if(button1){
+    aSin.setFreq(220 + knob);
+  }
+  if(button2){
+    aSin.setFreq(220 + knob + voltage);
+  }
+  
+  if(!button1 && synthon){
+    stopMozzi();
+    synthon = false;
+  }
+  */
+  
   audioHook(); // required here
   
+  
 }
-```

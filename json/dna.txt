@@ -1,0 +1,42 @@
+{
+    "html": [
+        "README.md",
+        "fork.html",
+        "index.html",
+        "pageset.html",
+        "webeditor.html"
+    ],
+    "json": [
+        "dna.txt"
+    ],
+    "php": [
+        "dir.txt",
+        "dnagenerator.txt",
+        "editor.txt",
+        "fileloader.txt",
+        "filesaver.txt",
+        "mkdir.txt",
+        "notebook.txt",
+        "pageeditor.txt",
+        "pagesetreplicator.txt",
+        "rdir.txt",
+        "replicator.txt",
+        "text2php.txt"
+    ],
+    "pages": [
+        "home"
+    ],
+    "icons": [
+        "chaos.svg",
+        "delete.svg",
+        "edit.svg",
+        "fork.svg",
+        "hidemenu.svg",
+        "home.svg",
+        "lightdark.svg",
+        "scroll.svg",
+        "showmenu.svg",
+        "uplink.svg",
+        "www.svg"
+    ]
+}
