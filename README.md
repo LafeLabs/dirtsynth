@@ -82,3 +82,8 @@ void loop(){
   
 }
 ```
+
+REPLICATE THIS PAGE WITH THE QRCODES BELOW:
+
+![](https://raw.githubusercontent.com/LafeLabs/dirtsynth/main/images/qrcode.png)
+![](https://raw.githubusercontent.com/LafeLabs/dirtsynth/main/images/qrcode-page.png)
