@@ -1,5 +1,7 @@
  # DIRT SYNTH
 
+![](https://raw.githubusercontent.com/LafeLabs/dirtsynth/main/images/dirtsynth.png)
+
 PUT A FEW MICROFARADS CAPACITOR IN SERIES WITH PIN 9 FROM YOUR ARDUINO INTO AN AUDIO JACK! 
 
 THIS WILL MAKE SURE WE DON'T DRIVE DC DOWN THAT LINE!
